@@ -32,23 +32,11 @@
   border-color: #5dbea3;
 }
 
-.button {
-  font: inherit;
-  padding: 0.5rem 1.5rem;
-  color: white;
-  background: #5dbea3;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
-  border: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
+.form-control.invalid input {
+  border-color: red;
+  background: rgb(255, 216, 216);
 }
 
-.button:focus {
-  outline: none;
-}
-
-.button:hover,
-.button:active {
-  background: #6cddbd;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+.form-control.invalid label {
+  color: red;
 }
