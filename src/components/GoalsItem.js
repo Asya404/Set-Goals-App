@@ -1,4 +1,4 @@
-import "./GoalsItem.css";
+import styles from "./GoalsItem.module.css";
 
 const GoalsItem = (props) => {
   const deleteHandler = (e) => {
@@ -6,7 +6,7 @@ const GoalsItem = (props) => {
   };
 
   return (
-    <li className="goal-item" id={props.id} onClick={deleteHandler}>
+    <li className={styles["goal-item"]} id={props.id} onClick={deleteHandler}>
       {props.text}
     </li>
   );

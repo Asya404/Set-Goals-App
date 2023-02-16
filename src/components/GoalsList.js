@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import "./GoalsList.css";
+import styles from "./GoalsList.module.css";
 import GoalsItem from "./GoalsItem";
 
 const GoalsList = (props) => {
 
 
   return (
-    <ul className="goals-list">
+    <ul className={styles["goals-list"]}>
       {props.items.map((item) => (
         <GoalsItem key={item.id} id={item.id} text={item.text} onDelete={props.onDelete} />
       ))}

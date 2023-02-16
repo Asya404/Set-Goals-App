@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
-import "./GoalsForm.css";
+import styles from "./GoalsForm.module.css";
 
 const GoalsForm = (props) => {
   const [enteredText, updateEnteredText] = useState("");
@@ -32,8 +32,8 @@ const GoalsForm = (props) => {
   };
 
   return (
-    <form className="goal-form">
-      <div className={`form-control ${!isValid ? "invalid" : ""}`}>
+    <form className={styles["goal-form"]}>
+      <div className={`${styles["form-control"]} ${!isValid && styles["invalid"]}`}>
         <label>Course Goal</label>
         <input type="text" onChange={textChangeHandler} value={enteredText}></input>
       </div>

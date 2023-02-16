@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GoalsForm from "./components/GoalsForm";
 import GoalsList from "./components/GoalsList";
-import "./App.css";
+import styles from "./App.module.css";
 
 const DUMMY_GOALS = [
   { text: "Do all exercises!", id: "g1" },
@@ -30,7 +30,7 @@ function App() {
   // console.log(goals);
 
   return (
-    <div className="goals">
+    <div className={styles.goals}>
       <GoalsForm className="goals-form" onAddGoal={addItemHandler} />
       <GoalsList items={goals} onDelete={deleteItemHandler} />
     </div>
